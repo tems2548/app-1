@@ -8,58 +8,85 @@
 import SwiftUI
 
 struct HanoiComponent: View {
-    // parameters
     @State var hanoi = Hanoi()
+    
     @State var from: Int? = nil
     @State var outputError: String = ""
     @State var isSolved = false
     
+    @State var moveCount = 0
+    @State var showTime = "0.00"
+    let startDate = Date.now
+    let timer = Timer.publish(every: 0.01, on: .main, in: .common).autoconnect()
+    
+    
+    func tapHandler(i: Int) {
+        if from == nil {
+            from = i
+        } else {
+            let to = i
+            do {
+                try hanoi.move(from: from!, to: to)
+                isSolved = hanoi.isSolved()
+                if isSolved {
+                    // stop timer
+                    timer.upstream.connect().cancel()
+                }
+                outputError = ""
+            } catch MyError.Message(let msg) {
+                outputError = msg
+            } catch {
+                outputError = error.localizedDescription
+            }
+            from = nil
+        }
+    }
+    
     var body: some View {
-        VStack {
-            HStack {
-                ForEach(0..<3) { i in
-                    VStack {
-                        ForEach(0..<hanoi.height) { rj in
-                            if let num = hanoi.towers[i][hanoi.height-rj-1] {
-                                Text("\(num)")
-                            } else {
-                                Text("|")
-                            }
+        ZStack {
+            VStack {
+                HStack {
+                    ForEach(0..<3) { i in
+                        VStack {
+                            TowerComponent(height: hanoi.height, topIdx: hanoi.indexs[i], arr: hanoi.towers[i], selected: from == i)
+                        }
+                        .onTapGesture {
+                            tapHandler(i: i)
                         }
                     }
                 }
-            }
-            
-            HStack {
-                ForEach(0..<3)  { i in
-                    Button("\(i)") {
-                        print("heyy \(i)")
-                        if from == nil {
-                            from = i
-                        } else {
-                            let to = i
-                            do {
-                                try hanoi.move(from: from!, to: to)
-                                isSolved = hanoi.isSolved()
-                                outputError = ""
-                            } catch MyError.Message(let msg) {
-                                outputError = msg
-                            } catch {
-                                outputError = error.localizedDescription
-                            }
-                            from = nil
-                        }
-                    }
+                
+                Text(outputError != "" ? "error: \(outputError)" : "")
+                if isSolved {
+                    Text("you'd win.")
                 }
             }
             
-            Text(outputError != "" ? "error: \(outputError)" : "")
-            if isSolved {
-                Text("you'd win.")
+            VStack {
+                HStack {
+                    Spacer()
+                    Text("Move: \(moveCount)")
+                        .font(.system(size: 40, weight: .bold))
+                        .padding(.top, 50)
+                        .padding(.horizontal, 60)
+                }
+                Spacer()
             }
-//            Text("outputError = \(outputError)")
-//            Text("from = \(from ?? -555)")
             
+            VStack {
+                HStack {
+                    Spacer()
+                    Text("Time: \(showTime)")
+                        .onReceive(timer) { firedDate in
+                            showTime = String(format: "%.2f", Float(firedDate.timeIntervalSince(startDate)))
+                        }
+                        .font(.system(size: 40, weight: .bold))
+                        .padding(.top, 50)
+                        .padding(.horizontal, 60)
+                    Spacer()
+                }
+                Spacer()
+            }
             
         }
     }
