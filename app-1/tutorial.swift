@@ -9,7 +9,7 @@ import SwiftUI
 
 struct tutorial: View {
     var body: some View {
-
+        
         NavigationStack {
             VStack {
                 Image("Tutorialimg")
@@ -20,10 +20,10 @@ struct tutorial: View {
                     .font(.title2)
             }
             .navigationTitle("Tutorial")
-
+            
+        }
     }
 }
-
 struct tutorial_Previews: PreviewProvider {
     static var previews: some View {
         tutorial()
