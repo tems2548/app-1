@@ -18,6 +18,11 @@
 		7CA3028E2BA00359005DAAAC /* tutorial.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CA3028D2BA00359005DAAAC /* tutorial.swift */; };
 		7CA302902BA00FA9005DAAAC /* stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CA3028F2BA00FA9005DAAAC /* stack.swift */; };
 		84803F932BA025F300FF8E9D /* LinkComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84803F922BA025F300FF8E9D /* LinkComponent.swift */; };
+		84803F9A2BA0312F00FF8E9D /* HanoiComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84803F992BA0312F00FF8E9D /* HanoiComponent.swift */; };
+		84803F9C2BA031B000FF8E9D /* HistoryManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84803F9B2BA031B000FF8E9D /* HistoryManager.swift */; };
+		84803F9E2BA031CA00FF8E9D /* MyError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84803F9D2BA031CA00FF8E9D /* MyError.swift */; };
+		84803FA02BA031F100FF8E9D /* Hanoi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84803F9F2BA031F100FF8E9D /* Hanoi.swift */; };
+		84803FA22BA0339900FF8E9D /* TowerComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84803FA12BA0339900FF8E9D /* TowerComponent.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +57,11 @@
 		7CA3028D2BA00359005DAAAC /* tutorial.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tutorial.swift; sourceTree = "<group>"; };
 		7CA3028F2BA00FA9005DAAAC /* stack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = stack.swift; sourceTree = "<group>"; };
 		84803F922BA025F300FF8E9D /* LinkComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkComponent.swift; sourceTree = "<group>"; };
+		84803F992BA0312F00FF8E9D /* HanoiComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HanoiComponent.swift; sourceTree = "<group>"; };
+		84803F9B2BA031B000FF8E9D /* HistoryManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryManager.swift; sourceTree = "<group>"; };
+		84803F9D2BA031CA00FF8E9D /* MyError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyError.swift; sourceTree = "<group>"; };
+		84803F9F2BA031F100FF8E9D /* Hanoi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hanoi.swift; sourceTree = "<group>"; };
+		84803FA12BA0339900FF8E9D /* TowerComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TowerComponent.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +112,7 @@
 		7C5450172A52B82A00D33477 /* app-1 */ = {
 			isa = PBXGroup;
 			children = (
+				84803F982BA0309C00FF8E9D /* Hanoi */,
 				7C5450182A52B82A00D33477 /* app_1App.swift */,
 				7C54501A2A52B82A00D33477 /* ContentView.swift */,
 				7CA3028D2BA00359005DAAAC /* tutorial.swift */,
@@ -137,6 +148,18 @@
 				7C5450352A52B82B00D33477 /* app_1UITestsLaunchTests.swift */,
 			);
 			path = "app-1UITests";
+			sourceTree = "<group>";
+		};
+		84803F982BA0309C00FF8E9D /* Hanoi */ = {
+			isa = PBXGroup;
+			children = (
+				84803F992BA0312F00FF8E9D /* HanoiComponent.swift */,
+				84803F9B2BA031B000FF8E9D /* HistoryManager.swift */,
+				84803F9D2BA031CA00FF8E9D /* MyError.swift */,
+				84803F9F2BA031F100FF8E9D /* Hanoi.swift */,
+				84803FA12BA0339900FF8E9D /* TowerComponent.swift */,
+			);
+			path = Hanoi;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -270,9 +293,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				7CA302902BA00FA9005DAAAC /* stack.swift in Sources */,
+				84803F9A2BA0312F00FF8E9D /* HanoiComponent.swift in Sources */,
+				84803FA22BA0339900FF8E9D /* TowerComponent.swift in Sources */,
 				84803F932BA025F300FF8E9D /* LinkComponent.swift in Sources */,
 				7C5AA8722B9FF96500DEB5EE /* detail.swift in Sources */,
+				84803F9C2BA031B000FF8E9D /* HistoryManager.swift in Sources */,
 				7CA3028E2BA00359005DAAAC /* tutorial.swift in Sources */,
+				84803F9E2BA031CA00FF8E9D /* MyError.swift in Sources */,
+				84803FA02BA031F100FF8E9D /* Hanoi.swift in Sources */,
 				7C54501B2A52B82A00D33477 /* ContentView.swift in Sources */,
 				7C5450192A52B82A00D33477 /* app_1App.swift in Sources */,
 			);
