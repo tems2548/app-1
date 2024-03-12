@@ -9,40 +9,16 @@ import SwiftUI
 
 struct tutorial: View {
     var body: some View {
-        HStack{
-            ZStack {
-                RoundedRectangle(cornerRadius: 10).fill(Color.cyan).frame(width: 10,height:100).padding(.bottom,50)
-                VStack {
-                    RoundedRectangle(cornerRadius: 10).fill(Color.cyan).frame(width: 25,height: 10)
-                    RoundedRectangle(cornerRadius: 10).fill(Color.cyan).frame(width: 50,height: 10)
-                    RoundedRectangle(cornerRadius: 10).fill(Color.cyan).frame(width: 100,height: 10)
-                    RoundedRectangle(cornerRadius: 10).fill(Color.cyan).frame(width: 150,height: 10)
-                    
-                }
-//                Spacer()
-            };
-            ZStack {
-                RoundedRectangle(cornerRadius: 10).fill(Color.cyan).frame(width: 10,height:100).padding(.bottom,50)
-                VStack {
-                    RoundedRectangle(cornerRadius: 10).fill(Color.cyan).frame(width: 25,height: 10)
-                    RoundedRectangle(cornerRadius: 10).fill(Color.cyan).frame(width: 50,height: 10)
-                    RoundedRectangle(cornerRadius: 10).fill(Color.cyan).frame(width: 100,height: 10)
-                    RoundedRectangle(cornerRadius: 10).fill(Color.cyan).frame(width: 150,height: 10)
-                    
-                }
-//                Spacer()
-            };
-            ZStack {
-                RoundedRectangle(cornerRadius: 10).fill(Color.cyan).frame(width: 10,height:100).padding(.bottom,50)
-                VStack {
-                    RoundedRectangle(cornerRadius: 10).fill(Color.cyan).frame(width: 25,height: 10)
-                    RoundedRectangle(cornerRadius: 10).fill(Color.cyan).frame(width: 50,height: 10)
-                    RoundedRectangle(cornerRadius: 10).fill(Color.cyan).frame(width: 100,height: 10)
-                    RoundedRectangle(cornerRadius: 10).fill(Color.cyan).frame(width: 150,height: 10)
-                    
-                }
-                
-            };Spacer()
+        NavigationStack {
+            VStack {
+                Image("Tutorialimg")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .frame(maxWidth: .infinity)
+                Text("- Transfer all discs from the first tower to the third tower.\nOnly one disc can be moved at a time.\n- Only the top disc of one stack can be transferred to the top of another stack or an empty rod.\n- Larger discs cannot be stacked over smaller ones.")
+                    .font(.title2)
+            }
+            .navigationTitle("Tutorial")
         }
     }
 }
