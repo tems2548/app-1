@@ -29,6 +29,9 @@ struct LinkComponent<Destination: View>: View {
     }
 }
 
-#Preview {
-    LinkComponent(text: "hello world", destination: tutorial())
+struct LinkComponent_Previews: PreviewProvider {
+    static var previews: some View {
+        LinkComponent(text: "hello world", destination: tutorial())
+    }
 }
+
