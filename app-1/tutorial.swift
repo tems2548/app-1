@@ -9,7 +9,6 @@ import SwiftUI
 
 struct tutorial: View {
     var body: some View {
-        
         NavigationStack {
             VStack {
                 Image("Tutorialimg")
