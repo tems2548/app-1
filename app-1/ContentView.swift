@@ -25,7 +25,8 @@ struct ContentView: View {
                     .foregroundColor(dark)
                     Spacer()
                     VStack {
-                        LinkComponent(text: "Play", destination: tutorial())
+                        
+                        LinkComponent(text: "Play", destination: detail())
                         LinkComponent(text: "Tutorial", destination: tutorial())
 
                         Spacer()

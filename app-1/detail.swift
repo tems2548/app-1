@@ -9,7 +9,23 @@ import SwiftUI
 
 struct detail: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            HStack(alignment:.center){
+                LinkComponent(text: "back", destination: ContentView()
+                )
+                Spacer()
+                Text("10:05").font(.system(size: 44))
+                Spacer()
+
+            }
+            HStack(alignment:
+                    .bottom){
+                        Stacks(Stack: 7)
+                        Stacks(Stack: 7)
+                        Stacks(Stack: 7)
+                    }.padding(.top,40)
+        }
+
     }
 }
 
