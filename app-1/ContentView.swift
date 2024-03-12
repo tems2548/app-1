@@ -28,7 +28,10 @@ struct ContentView: View {
                 VStack {
                     LinkComponent(text: "Play", destination: HanoiComponent())
                     LinkComponent(text: "Tutorial", destination: tutorial())
-                    
+//                    Button("" , systemImage: "plus.circle") {
+//                        
+//                    }
+//                    .font(.largeTitle)
 //                        Spacer()
                     
                 }
