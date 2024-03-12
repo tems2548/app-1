@@ -72,9 +72,13 @@ struct Hanoi {
       throw error
     }
   }
-
+    
   func getTopDisk(_ i: Int) -> Int? {
-    return self.towers[i][self.indexs[i]]
+      if self.indexs[i] == -1 || self.indexs[i] >= height {
+          return nil
+      }
+      
+      return self.towers[i][self.indexs[i]]
   }
 
   mutating func setTopDisk(_ i: Int, value: Int?) {
