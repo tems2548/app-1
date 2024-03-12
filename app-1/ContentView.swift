@@ -25,25 +25,9 @@ struct ContentView: View {
                     .foregroundColor(dark)
                     Spacer()
                     VStack {
-                        HStack {
-                            NavigationLink{ tutorial()
-                                
-                            }label: {
-                                Text("PLAY").frame(width: 300,height: 60)
-                                    .background(dark).foregroundColor(Color.white)
-                                    .font(.system(size: 30)).cornerRadius(15)
-                            }.padding(.bottom,30)
-                        }
-                                
-                        Button(action: {
-                            detailview = true
-                        })
-                        {
-                            Text("How to play?").frame(width: 300,height: 60)
-                        }.background(dark).foregroundColor(.white)
-                            .font(.system(size: 30)).cornerRadius(15) .navigationDestination(isPresented: $detailview){
-                                detail()
-                            }
+                        LinkComponent(text: "Play", destination: tutorial())
+                        LinkComponent(text: "Tutorial", destination: tutorial())
+
                         Spacer()
                             
                     }
