@@ -13,26 +13,35 @@ struct ContentView: View {
     var body: some View {
         NavigationStack {
             VStack {
-                    VStack(alignment: .leading){
+                VStack(alignment: .leading) {
                         Text("Hanoi speed")
-                        //                .foregroundColor(.white)
+//                          .foregroundColor(.white)
                             .font(.system(size: 50,weight: .bold))
-                    }.padding(.top,40)
-                        .padding(.horizontal,40)
-                        .padding(.bottom,60)
-                        .background(Color.white)
-        //                .padding(.horizontal,20)
+                    }
+                    .padding(.top,40)
+                    .padding(.horizontal,40)
+                    .padding(.bottom,60)
+                    .background(.opacity(0))
+//                  .padding(.horizontal,20)
                     .foregroundColor(dark)
                     Spacer()
-                    VStack {
-                        LinkComponent(text: "Play", destination: HanoiComponent())
-                        LinkComponent(text: "Tutorial", destination: tutorial())
-
-                        Spacer()
-                            
-                    }
+                VStack {
+                    LinkComponent(text: "Play", destination: HanoiComponent())
+                    LinkComponent(text: "Tutorial", destination: tutorial())
+                    
+//                        Spacer()
+                    
+                }
+                .padding(.bottom, 200)
                 
             }
+            .background(
+                Image("HomePage")
+                    .resizable()
+                    .aspectRatio(contentMode: .fill)
+                    .ignoresSafeArea(.all)
+                    .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/)
+            )
         }
     }
 }
