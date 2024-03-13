@@ -15,24 +15,17 @@ struct ContentView: View {
             VStack {
                 VStack(alignment: .leading) {
                         Text("Hanoi speed")
-//                          .foregroundColor(.white)
                             .font(.system(size: 50,weight: .bold))
                     }
                     .padding(.top,40)
                     .padding(.horizontal,40)
                     .padding(.bottom,60)
                     .background(.opacity(0))
-//                  .padding(.horizontal,20)
                     .foregroundColor(dark)
                     Spacer()
                 VStack {
                     LinkComponent(text: "Play", destination: HanoiComponent())
                     LinkComponent(text: "Tutorial", destination: tutorial())
-//                    Button("" , systemImage: "plus.circle") {
-//                        
-//                    }
-//                    .font(.largeTitle)
-//                        Spacer()
                     
                 }
                 .padding(.bottom, 200)

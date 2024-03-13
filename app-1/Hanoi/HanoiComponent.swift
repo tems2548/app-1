@@ -27,6 +27,7 @@ struct HanoiComponent: View {
             let to = i
             do {
                 try hanoi.move(from: from!, to: to)
+                moveCount += 1
                 isSolved = hanoi.isSolved()
                 if isSolved {
                     // stop timer
@@ -86,6 +87,30 @@ struct HanoiComponent: View {
                     Spacer()
                 }
                 Spacer()
+            }
+            
+            if isSolved {
+                VStack {
+                }
+                .frame(maxWidth: .infinity, maxHeight: .infinity)
+                .background(Color.white)
+                .opacity(0.7)
+                
+                VStack {
+                    Text("Congratulations 🥳🥳🥳")
+                        .font(.system(size: 70, weight: .bold))
+                        .padding(.top, 30)
+                    Spacer()
+                    Text("You solved the Hanoi Tower in")
+                        .font(.system(size: 24))
+                    Text("**\(showTime)** Seconds and **\(moveCount)** Moves")
+                        .font(.system(size: 48))
+                    Spacer()
+                    HStack(spacing: 40) {
+                        LinkComponent(text: "Play Again", destination: HanoiComponent())
+                        LinkComponent(text: "Back", destination: ContentView())
+                    }
+                }
             }
             
         }
