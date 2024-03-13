@@ -8,15 +8,15 @@
 import SwiftUI
 
 
-struct setting: View {
-    @State var diff = 0
+struct difficulty: View {
+    @State var diff = 3
     var steper = 1
     var range = 1
     func lim() {
         if diff > 8{
             diff = 8
-        }else if diff < 0{
-            diff = 0
+        }else if diff < 3{
+            diff = 3
         }
     }
     
@@ -75,8 +75,8 @@ struct setting: View {
 
 }
 
-struct setting_Previews: PreviewProvider {
+struct difficulty_Previews: PreviewProvider {
     static var previews: some View {
-        setting()
+        difficulty()
     }
 }
