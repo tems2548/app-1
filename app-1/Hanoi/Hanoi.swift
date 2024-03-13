@@ -5,7 +5,6 @@
 //  Created by admin on 3/12/24.
 //
 
-777
 //            return JSONManager.decodeJSON<[Record]>(x, defaultValue: [])
 import Foundation
 

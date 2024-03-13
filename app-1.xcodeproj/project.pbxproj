@@ -22,6 +22,8 @@
 		84803F9E2BA031CA00FF8E9D /* MyError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84803F9D2BA031CA00FF8E9D /* MyError.swift */; };
 		84803FA02BA031F100FF8E9D /* Hanoi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84803F9F2BA031F100FF8E9D /* Hanoi.swift */; };
 		84803FA22BA0339900FF8E9D /* TowerComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84803FA12BA0339900FF8E9D /* TowerComponent.swift */; };
+		84AD9DF62BA12CD000E36A83 /* RecordStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AD9DF52BA12CD000E36A83 /* RecordStore.swift */; };
+		84AD9DF82BA1418200E36A83 /* JSONManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AD9DF72BA1418200E36A83 /* JSONManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +62,8 @@
 		84803F9D2BA031CA00FF8E9D /* MyError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyError.swift; sourceTree = "<group>"; };
 		84803F9F2BA031F100FF8E9D /* Hanoi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hanoi.swift; sourceTree = "<group>"; };
 		84803FA12BA0339900FF8E9D /* TowerComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TowerComponent.swift; sourceTree = "<group>"; };
+		84AD9DF52BA12CD000E36A83 /* RecordStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordStore.swift; sourceTree = "<group>"; };
+		84AD9DF72BA1418200E36A83 /* JSONManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +114,7 @@
 		7C5450172A52B82A00D33477 /* app-1 */ = {
 			isa = PBXGroup;
 			children = (
+				84AD9DF42BA12CBA00E36A83 /* Store */,
 				84803F982BA0309C00FF8E9D /* Hanoi */,
 				7C5450182A52B82A00D33477 /* app_1App.swift */,
 				7C54501A2A52B82A00D33477 /* ContentView.swift */,
@@ -157,6 +162,15 @@
 				84803FA12BA0339900FF8E9D /* TowerComponent.swift */,
 			);
 			path = Hanoi;
+			sourceTree = "<group>";
+		};
+		84AD9DF42BA12CBA00E36A83 /* Store */ = {
+			isa = PBXGroup;
+			children = (
+				84AD9DF52BA12CD000E36A83 /* RecordStore.swift */,
+				84AD9DF72BA1418200E36A83 /* JSONManager.swift */,
+			);
+			path = Store;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -223,7 +237,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1430;
-				LastUpgradeCheck = 1430;
+				LastUpgradeCheck = 1520;
 				TargetAttributes = {
 					7C5450142A52B82A00D33477 = {
 						CreatedOnToolsVersion = 14.3.1;
@@ -290,6 +304,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				84803F9A2BA0312F00FF8E9D /* HanoiComponent.swift in Sources */,
+				84AD9DF82BA1418200E36A83 /* JSONManager.swift in Sources */,
 				84803FA22BA0339900FF8E9D /* TowerComponent.swift in Sources */,
 				7C824F702BA13F67000B8EA5 /* difficulty.swift in Sources */,
 				84803F932BA025F300FF8E9D /* LinkComponent.swift in Sources */,
@@ -385,7 +400,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -439,7 +454,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
