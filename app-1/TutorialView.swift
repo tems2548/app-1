@@ -25,7 +25,7 @@ struct tutorial: View {
                     .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
                 ZStack {
                     RoundedRectangle(cornerRadius: 20).fill(dark).frame(width: .infinity,height: 225).padding(.horizontal,50)
-                    Text("- Transfer all discs from the first tower to the third tower.\nOnly one disc can be moved at a time.\n- Only the top disc of one stack can be transferred to the top of another stack or an empty rod.\n- Larger discs cannot be stacked over smaller ones.")
+                    Text("- Transfer all discs from the first tower to the third tower.\n- Only one disc can be moved at a time.\n- Only the top disc of one stack can be transferred to the top of another stack or an empty rod.\n- Larger discs cannot be stacked over smaller ones.")
                         .font(.title).foregroundStyle(.white).padding(.horizontal,40)
                 }
             }
