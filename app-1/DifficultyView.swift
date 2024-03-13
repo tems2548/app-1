@@ -9,6 +9,7 @@ import SwiftUI
 
 
 struct difficulty: View {
+    let dark = Color(red: 0.13, green: 0.15, blue: 0.19)
     @State var diff = 3
     var steper = 1
     var range = 1
@@ -22,14 +23,14 @@ struct difficulty: View {
     
     var body: some View {
         VStack {
-            Text("Difficulty").font(.system(size: 60,weight: .bold))
-                .padding(.top,50)
+            Text("Difficulty").font(.system(size: 80,weight: .bold))
+                .padding(.top,60)
             Spacer()
             HStack {
                 Spacer()
                 // left
                 ZStack {
-                    RoundedRectangle(cornerRadius: 20).fill(Color.cyan)
+                    RoundedRectangle(cornerRadius: 35).fill(dark)
                         .frame(width: 150,height: 150)
                     RoundedRectangle(cornerRadius: 20).fill(Color.white)
                         .frame(width: 125,height: 125)
@@ -41,7 +42,7 @@ struct difficulty: View {
                 Spacer()
                 // middle
                 ZStack {
-                    RoundedRectangle(cornerRadius: 20).fill(Color.cyan)
+                    RoundedRectangle(cornerRadius: 35).fill(dark)
                         .frame(width: 300,height: 300)
                     RoundedRectangle(cornerRadius: 20).fill(Color.white)
                         .frame(width: 250,height: 250)
@@ -51,7 +52,7 @@ struct difficulty: View {
                 //right
                 ZStack {
 
-                    RoundedRectangle(cornerRadius: 20).fill(Color.cyan)
+                    RoundedRectangle(cornerRadius: 35).fill(dark)
                         .frame(width: 150,height: 150)
                     RoundedRectangle(cornerRadius: 20).fill(Color.white)
                         .frame(width: 125,height: 125)
@@ -67,7 +68,7 @@ struct difficulty: View {
             }
         
             Spacer()
-            LinkComponent(text: "Start", destination: HanoiComponent(height: $diff))
+            LinkComponent(text: "Start !!!", destination: HanoiComponent(height: $diff))
             
         }
         
