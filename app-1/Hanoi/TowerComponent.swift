@@ -19,7 +19,7 @@ struct TowerComponent: View {
             VStack(spacing: 0) {
                 Spacer()
                 RoundedRectangle(cornerRadius: 10)
-                    .fill(Color.cyan)
+                    .fill(Color(UIColor(rgb: 0xD9D9D9)))
                     .frame(width: 10, height: CGFloat(250))
             }
             
@@ -31,13 +31,13 @@ struct TowerComponent: View {
                         (CGFloat(0))
                     
                     RoundedRectangle(cornerRadius: 10)
-                        .fill(Color.cyan)
+                        .fill(arr[height-idx-1] != nil ? NormalTheme[arr[height-idx-1]!] : NormalTheme[0])
                         .frame(width: width, height: 15)
                         .padding(selected && topIdx != nil && height-idx-1 == topIdx ? 30 : 0)
                 }
                 
                 RoundedRectangle(cornerRadius: 10)
-                    .fill(Color.red)
+                    .fill(Color(UIColor(rgb: 0xD9D9D9)))
                     .frame(width: CGFloat(200 + 10*height), height: 15)
             }
             
