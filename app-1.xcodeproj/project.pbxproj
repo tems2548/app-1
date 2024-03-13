@@ -14,6 +14,7 @@
 		7C54502A2A52B82B00D33477 /* app_1Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C5450292A52B82B00D33477 /* app_1Tests.swift */; };
 		7C5450342A52B82B00D33477 /* app_1UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C5450332A52B82B00D33477 /* app_1UITests.swift */; };
 		7C5450362A52B82B00D33477 /* app_1UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C5450352A52B82B00D33477 /* app_1UITestsLaunchTests.swift */; };
+		7C824F702BA13F67000B8EA5 /* difficulty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C824F6F2BA13F67000B8EA5 /* difficulty.swift */; };
 		7CA3028E2BA00359005DAAAC /* TutorialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CA3028D2BA00359005DAAAC /* TutorialView.swift */; };
 		84803F932BA025F300FF8E9D /* LinkComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84803F922BA025F300FF8E9D /* LinkComponent.swift */; };
 		84803F9A2BA0312F00FF8E9D /* HanoiComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84803F992BA0312F00FF8E9D /* HanoiComponent.swift */; };
@@ -51,6 +52,7 @@
 		7C54502F2A52B82B00D33477 /* app-1UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "app-1UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C5450332A52B82B00D33477 /* app_1UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = app_1UITests.swift; sourceTree = "<group>"; };
 		7C5450352A52B82B00D33477 /* app_1UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = app_1UITestsLaunchTests.swift; sourceTree = "<group>"; };
+		7C824F6F2BA13F67000B8EA5 /* difficulty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = difficulty.swift; sourceTree = "<group>"; };
 		7CA3028D2BA00359005DAAAC /* TutorialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialView.swift; sourceTree = "<group>"; };
 		84803F922BA025F300FF8E9D /* LinkComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkComponent.swift; sourceTree = "<group>"; };
 		84803F992BA0312F00FF8E9D /* HanoiComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HanoiComponent.swift; sourceTree = "<group>"; };
@@ -112,6 +114,7 @@
 				7C5450182A52B82A00D33477 /* app_1App.swift */,
 				7C54501A2A52B82A00D33477 /* ContentView.swift */,
 				7CA3028D2BA00359005DAAAC /* TutorialView.swift */,
+				7C824F6F2BA13F67000B8EA5 /* difficulty.swift */,
 				7C54501C2A52B82B00D33477 /* Assets.xcassets */,
 				7C54501E2A52B82B00D33477 /* Preview Content */,
 				84803F922BA025F300FF8E9D /* LinkComponent.swift */,
@@ -288,6 +291,7 @@
 			files = (
 				84803F9A2BA0312F00FF8E9D /* HanoiComponent.swift in Sources */,
 				84803FA22BA0339900FF8E9D /* TowerComponent.swift in Sources */,
+				7C824F702BA13F67000B8EA5 /* difficulty.swift in Sources */,
 				84803F932BA025F300FF8E9D /* LinkComponent.swift in Sources */,
 				84803F9C2BA031B000FF8E9D /* HistoryManager.swift in Sources */,
 				7CA3028E2BA00359005DAAAC /* TutorialView.swift in Sources */,
