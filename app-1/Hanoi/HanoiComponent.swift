@@ -8,7 +8,9 @@
 import SwiftUI
 
 struct HanoiComponent: View {
-    @State var hanoi = Hanoi(rods: 3, height: 3)
+    @Binding var height: Int
+
+    @State var hanoi: Hanoi? = nil
     
     @State var from: Int? = nil
     @State var outputError: String = ""
@@ -26,9 +28,9 @@ struct HanoiComponent: View {
         } else {
             let to = i
             do {
-                try hanoi.move(from: from!, to: to)
+                try hanoi!.move(from: from!, to: to)
                 moveCount += 1
-                isSolved = hanoi.isSolved()
+                isSolved = hanoi!.isSolved()
                 if isSolved {
                     // stop timer
                     timer.upstream.connect().cancel()
@@ -49,7 +51,9 @@ struct HanoiComponent: View {
                 HStack {
                     ForEach(0..<3) { i in
                         VStack {
-                            TowerComponent(height: hanoi.height, topIdx: hanoi.indexs[i], arr: hanoi.towers[i], selected: from == i)
+                            if let hanoi {
+                                TowerComponent(height: hanoi.height, topIdx: hanoi.indexs[i], arr: hanoi.towers[i], selected: from == i)
+                            }
                         }
                         .onTapGesture {
                             tapHandler(i: i)
@@ -58,9 +62,6 @@ struct HanoiComponent: View {
                 }
                 
                 Text(outputError != "" ? "error: \(outputError)" : "")
-                if isSolved {
-                    Text("you'd win.")
-                }
             }
             
             VStack {
@@ -114,12 +115,15 @@ struct HanoiComponent: View {
             }
             
         }
+        .onAppear {
+            hanoi = Hanoi(rods: 3, height: height)
+        }
     }
 }
 
 struct HanoiComponent_Previews: PreviewProvider {
     static var previews: some View {
-        HanoiComponent()
+        HanoiComponent(height: .constant(3))
     }
 }
 

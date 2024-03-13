@@ -67,7 +67,7 @@ struct difficulty: View {
             }
         
             Spacer()
-            LinkComponent(text: "Start", destination: HanoiComponent())
+            LinkComponent(text: "Start", destination: HanoiComponent(height: $diff))
             
         }
         

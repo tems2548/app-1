@@ -26,7 +26,7 @@ struct TowerComponent: View {
             VStack {
                 Spacer()
                 ForEach(0..<height) { idx in
-                    var width = (arr[height-idx-1] != nil) ? 
+                    let width = (arr[height-idx-1] != nil) ?
                         (CGFloat(50 + 25*arr[height-idx-1]!)) :
                         (CGFloat(0))
                     
@@ -39,8 +39,6 @@ struct TowerComponent: View {
                 RoundedRectangle(cornerRadius: 10)
                     .fill(Color.red)
                     .frame(width: CGFloat(200 + 10*height), height: 15)
-                
-                Text("topIdx: \(topIdx ?? -555)")
             }
             
         }
