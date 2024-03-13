@@ -29,7 +29,9 @@ struct HanoiComponent: View {
             let to = i
             do {
                 try hanoi!.move(from: from!, to: to)
-                moveCount += 1
+                if from != to {
+                    moveCount += 1
+                }
                 isSolved = hanoi!.isSolved()
                 if isSolved {
                     // stop timer
