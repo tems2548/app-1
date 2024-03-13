@@ -21,6 +21,8 @@ struct difficulty: View {
         }
     }
     
+    var bestRecord = BestRecord.loadBestRecord()
+    
     var body: some View {
         VStack {
             Text("Please select difficulty").font(.system(size: 80,weight: .bold))
@@ -66,7 +68,11 @@ struct difficulty: View {
                 Spacer()
                 
             }
-        
+            
+            ForEach(3..<9) { idx in
+                Text("\(idx) => time: \(bestRecord.records[idx]?.time ?? Float.infinity) | moves: \(bestRecord.records[idx]?.moveCount ?? Int.max)")
+            }
+            
             Spacer()
             LinkComponent(text: "Start !!!", destination: HanoiComponent(height: $diff))
             
