@@ -128,6 +128,11 @@ struct HanoiComponent: View {
                         .font(.system(size: 24))
                     Text("**\(showTime)** Seconds and **\(moveCount)** Moves")
                         .font(.system(size: 48))
+                    
+                    Text("Your best record on Difficulty \(height) is")
+                        .font(.system(size: 24))
+                    Text("**\(bestRecord.stringTime(height))** Seconds and **\(bestRecord.stringMoveCount(height))** Moves")
+                        .font(.system(size: 24))
                     Spacer()
                     HStack(spacing: 40) {
                         LinkComponent(text: "Play Again", destination: DifficultyView()).navigationBarBackButtonHidden(true)

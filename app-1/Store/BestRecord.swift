@@ -14,6 +14,20 @@ struct BestRecord: Codable {
         self.records = [nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil]
     }
     
+    func stringTime(_ difficulty: Int) -> String {
+        if self.records[difficulty] == nil {
+            return "None"
+        }
+        return String(format: "%.2f", self.records[difficulty]!.time)
+    }
+    
+    func stringMoveCount(_ difficulty: Int) -> String {
+        if self.records[difficulty] == nil {
+            return "None"
+        }
+        return String(self.records[difficulty]!.moveCount)
+    }
+    
     static func loadBestRecord() -> BestRecord {
         let defaultBestRecord = BestRecord()
         
