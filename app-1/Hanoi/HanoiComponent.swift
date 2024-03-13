@@ -18,7 +18,7 @@ struct HanoiComponent: View {
     
     @State var moveCount = 0
     @State var showTime = "0.00"
-    let startDate = Date.now
+    @State var startDate = Date.now
     let timer = Timer.publish(every: 0.01, on: .main, in: .common).autoconnect()
     
     
@@ -117,6 +117,7 @@ struct HanoiComponent: View {
         }
         .onAppear {
             hanoi = Hanoi(rods: 3, height: height)
+            startDate = Date.now
         }
     }
 }
