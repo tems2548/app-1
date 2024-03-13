@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     let dark = Color(red: 0.13, green: 0.15, blue: 0.19)
-    @State private var detailview = false
+    
     var body: some View {
         NavigationStack {
             VStack {
@@ -24,7 +24,7 @@ struct ContentView: View {
                     .foregroundColor(dark)
                     Spacer()
                 VStack {
-                    LinkComponent(text: "Play", destination: difficulty()).navigationBarBackButtonHidden(true)
+                    LinkComponent(text: "Play", destination: DifficultyView()).navigationBarBackButtonHidden(true)
                     LinkComponent(text: "Tutorial", destination: tutorial()).navigationBarBackButtonHidden(true)
                     
                 }

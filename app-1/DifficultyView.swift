@@ -6,9 +6,9 @@
 //
 
 import SwiftUI
+import UIKit
 
-
-struct difficulty: View {
+struct DifficultyView: View {
     let dark = Color(red: 0.13, green: 0.15, blue: 0.19)
     @State var diff = 3
     var steper = 1
@@ -25,6 +25,14 @@ struct difficulty: View {
     
     var body: some View {
         VStack {
+            HStack() {
+                LinkComponent(text: "Back", destination: ContentView(), width: 200)
+                    .navigationBarBackButtonHidden(true)
+                    .padding(.top, 20)
+                    .padding(.leading, 40)
+                Spacer()
+            }
+            
             Text("Please select difficulty").font(.system(size: 80,weight: .bold))
                 .padding(.top,60)
             Spacer()
@@ -82,8 +90,8 @@ struct difficulty: View {
 
 }
 
-struct difficulty_Previews: PreviewProvider {
+struct DifficultyView_Previews: PreviewProvider {
     static var previews: some View {
-        difficulty()
+        DifficultyView()
     }
 }

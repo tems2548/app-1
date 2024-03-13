@@ -130,7 +130,7 @@ struct HanoiComponent: View {
                         .font(.system(size: 48))
                     Spacer()
                     HStack(spacing: 40) {
-                        LinkComponent(text: "Play Again", destination: difficulty()).navigationBarBackButtonHidden(true)
+                        LinkComponent(text: "Play Again", destination: DifficultyView()).navigationBarBackButtonHidden(true)
                         LinkComponent(text: "Back", destination: ContentView()).navigationBarBackButtonHidden(true)
                     }
                 }
