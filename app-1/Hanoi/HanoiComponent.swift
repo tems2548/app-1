@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct HanoiComponent: View {
-    @State var hanoi = Hanoi()
+    @State var hanoi = Hanoi(rods: 3, height: 3)
     
     @State var from: Int? = nil
     @State var outputError: String = ""
