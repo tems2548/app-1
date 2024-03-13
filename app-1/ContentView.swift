@@ -17,15 +17,15 @@ struct ContentView: View {
                         Text("Hanoi speed")
                             .font(.system(size: 100,weight: .bold))
                     }
-                    .padding(.top,40)
+                    .padding(.top,80)
                     .padding(.horizontal,40)
                     .padding(.bottom,60)
                     .background(.opacity(0))
                     .foregroundColor(dark)
                     Spacer()
                 VStack {
-                    LinkComponent(text: "Play", destination: difficulty())
-                    LinkComponent(text: "Tutorial", destination: tutorial())
+                    LinkComponent(text: "Play", destination: difficulty()).navigationBarBackButtonHidden(true)
+                    LinkComponent(text: "Tutorial", destination: tutorial()).navigationBarBackButtonHidden(true)
                     
                 }
                 .padding(.bottom, 200)
