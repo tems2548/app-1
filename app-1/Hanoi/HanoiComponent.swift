@@ -100,7 +100,7 @@ struct HanoiComponent: View {
                 .opacity(0.7)
                 
                 VStack {
-                    Text("Congratulations 🥳🥳🥳")
+                    Text("Congratulations 🤫🧏‍♂️")
                         .font(.system(size: 70, weight: .bold))
                         .padding(.top, 30)
                     Spacer()
