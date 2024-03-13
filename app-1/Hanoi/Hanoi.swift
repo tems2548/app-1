@@ -5,6 +5,8 @@
 //  Created by admin on 3/12/24.
 //
 
+777
+//            return JSONManager.decodeJSON<[Record]>(x, defaultValue: [])
 import Foundation
 
 struct Hanoi {
@@ -18,10 +20,10 @@ struct Hanoi {
   var indexs: [Int]
   private var historyManager: HistoryManager
 
-  init() {
+    init(rods: Int, height: Int) {
     // TODO: make init function be able to customize the rods and height
-    self.rods = 3
-    self.height = 3
+    self.rods = rods
+    self.height = height
 
     // int towers[rods][height] = {nil, nil, ...};
     self.towers = [[Int?]](repeating: [Int?](repeating: nil, count: height), count: rods)
