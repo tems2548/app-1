@@ -78,7 +78,12 @@ struct DifficultyView: View {
             }
             
             ForEach(3..<9) { idx in
-                Text("\(idx) => time: \(bestRecord.records[idx]?.time ?? Float.infinity) | moves: \(bestRecord.records[idx]?.moveCount ?? Int.max)")
+                var showTime = bestRecord.records[idx] == nil ? "None" : String(format: "%.2f", bestRecord.records[idx]!.time)
+                
+                var movecount = bestRecord.records[idx]?.moveCount == nil ? "None" : String(format: "%.2f", bestRecord.records[idx]!.moveCount)
+                
+                
+//                Text("\(idx) => time: \(showTime) | moves: \(bestRecord.records[idx]?.moveCount ?? 0)")
             }
             
             Spacer()
