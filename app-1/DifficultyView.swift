@@ -21,7 +21,6 @@ struct DifficultyView: View {
         }
     }
     
-    var bestRecord = BestRecord.loadBestRecord()
     
     var body: some View {
         VStack {
@@ -75,22 +74,6 @@ struct DifficultyView: View {
                 
                 Spacer()
                 
-            }
-            
-            ForEach(3..<9) { idx in
-                let showTime = bestRecord.records[idx] == nil ? "None" : String(format: "%.2f", bestRecord.records[idx]!.time)
-                
-                let movecount = bestRecord.records[idx]?.moveCount == nil ? "None" : String(bestRecord.records[idx]!.moveCount)
-                HStack (alignment: .top){
-                    Text("stack  \(idx) |").padding(.bottom,2)
-                    Text("time")
-                    Text(showTime)
-                    Text(movecount)
-                }
-                
-                
-                
-//                Text("\(idx) => time: \(showTime) | moves: \(bestRecord.records[idx]?.moveCount ?? 0)")
             }
             
             Spacer()
