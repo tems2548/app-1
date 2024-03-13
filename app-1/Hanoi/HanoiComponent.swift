@@ -21,6 +21,7 @@ struct HanoiComponent: View {
     @State var startDate = Date.now
     let timer = Timer.publish(every: 0.01, on: .main, in: .common).autoconnect()
     
+    @State var bestRecord = BestRecord.loadBestRecord()
     
     func tapHandler(i: Int) {
         if from == nil {
@@ -36,6 +37,7 @@ struct HanoiComponent: View {
                 if isSolved {
                     // stop timer
                     timer.upstream.connect().cancel()
+                    try setNewBestRecord()
                 }
                 outputError = ""
             } catch MyError.Message(let msg) {
@@ -45,6 +47,24 @@ struct HanoiComponent: View {
             }
             from = nil
         }
+    }
+    
+    func setNewBestRecord() throws {
+        let time = Float(showTime) ?? Float.infinity
+        
+        if bestRecord.records[height] == nil {
+            bestRecord.records[height] = Record(time: time, moveCount: moveCount)
+        } else {
+            if moveCount < bestRecord.records[height]!.moveCount {
+                bestRecord.records[height]!.moveCount = moveCount
+            }
+            
+            if time < bestRecord.records[height]!.time {
+                bestRecord.records[height]!.time = time
+            }
+        }
+        
+        try BestRecord.saveBestRecord(bestRecord: bestRecord)
     }
     
     var body: some View {
