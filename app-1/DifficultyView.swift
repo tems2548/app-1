@@ -23,7 +23,7 @@ struct difficulty: View {
     
     var body: some View {
         VStack {
-            Text("Difficulty").font(.system(size: 80,weight: .bold))
+            Text("Please select difficulty").font(.system(size: 80,weight: .bold))
                 .padding(.top,60)
             Spacer()
             HStack {
@@ -32,7 +32,7 @@ struct difficulty: View {
                 ZStack {
                     RoundedRectangle(cornerRadius: 35).fill(dark)
                         .frame(width: 150,height: 150)
-                    RoundedRectangle(cornerRadius: 20).fill(Color.white)
+                    RoundedRectangle(cornerRadius: 20).fill(Color.init(red: 1, green: 0.49, blue: 0.49))
                         .frame(width: 125,height: 125)
                     Button("-", action:{
                         diff -= 1
@@ -54,7 +54,7 @@ struct difficulty: View {
 
                     RoundedRectangle(cornerRadius: 35).fill(dark)
                         .frame(width: 150,height: 150)
-                    RoundedRectangle(cornerRadius: 20).fill(Color.white)
+                    RoundedRectangle(cornerRadius: 20).fill(Color.init(red: 0.49, green: 1, blue: 0.49))
                         .frame(width: 125,height: 125)
                     Button("+", action:{
                         diff += 1
